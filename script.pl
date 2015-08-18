@@ -37,13 +37,3 @@ sub run {
        serial_run($county,getPageNumbers($county)); 
     }
 }
-
-foreach my $county(14..20){
-       serial_run($county,getPageNumbers($county)); 
-    }
-# run();
-# my $county_id = 13;
-# serial_run($county_id,getPageNumbers($county_id));
-# while ( my $response = $async->wait_for_next_response ) {
-#    warn "waiting for database responses";
-# }
