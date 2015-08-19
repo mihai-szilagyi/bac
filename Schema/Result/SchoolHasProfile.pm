@@ -72,7 +72,7 @@ __PACKAGE__->belongs_to(
   "profile",
   "Schema::Result::Profile",
   { id => "profile_id" },
-  { is_deferrable => 1, on_delete => "NO ACTION", on_update => "NO ACTION" },
+  { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
 =head2 school
@@ -87,7 +87,7 @@ __PACKAGE__->belongs_to(
   "school",
   "Schema::Result::School",
   { id => "school_id" },
-  { is_deferrable => 1, on_delete => "NO ACTION", on_update => "NO ACTION" },
+  { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
 =head2 students
@@ -109,8 +109,8 @@ __PACKAGE__->has_many(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-08-18 15:45:32
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:4ioiY/rGOeQ4Aeo/DzfpDA
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-08-18 16:57:04
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:khB5iQPUFsBTli2aGXMJAg
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

@@ -68,6 +68,12 @@ __PACKAGE__->table("student");
   data_type: 'double precision'
   is_nullable: 1
 
+=head2 name
+
+  data_type: 'varchar'
+  is_nullable: 1
+  size: 200
+
 =cut
 
 __PACKAGE__->add_columns(
@@ -87,6 +93,8 @@ __PACKAGE__->add_columns(
   { data_type => "integer", default_value => 0, is_nullable => 1 },
   "media",
   { data_type => "double precision", is_nullable => 1 },
+  "name",
+  { data_type => "varchar", is_nullable => 1, size => 200 },
 );
 
 =head1 PRIMARY KEY
@@ -134,8 +142,8 @@ __PACKAGE__->belongs_to(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-08-18 15:45:32
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:tDgZECiIPQVaZGNgoEHDjQ
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-08-19 09:54:02
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:aowPNWThw3/F+QTpJbscsw
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

@@ -26,13 +26,14 @@ __PACKAGE__->table("school");
 =head2 id
 
   data_type: 'integer'
+  is_auto_increment: 1
   is_nullable: 0
 
 =head2 name
 
   data_type: 'varchar'
   is_nullable: 1
-  size: 45
+  size: 100
 
 =head2 county
 
@@ -49,9 +50,9 @@ __PACKAGE__->table("school");
 
 __PACKAGE__->add_columns(
   "id",
-  { data_type => "integer", is_nullable => 0 },
+  { data_type => "integer", is_auto_increment => 1, is_nullable => 0 },
   "name",
-  { data_type => "varchar", is_nullable => 1, size => 45 },
+  { data_type => "varchar", is_nullable => 1, size => 100 },
   "county",
   { data_type => "varchar", is_nullable => 1, size => 45 },
   "county_id",
@@ -98,8 +99,8 @@ Composing rels: L</school_has_profiles> -> profile
 __PACKAGE__->many_to_many("profiles", "school_has_profiles", "profile");
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-08-18 15:45:32
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:VSA9ScUpTycfk49v6+9ClA
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-08-19 09:54:02
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Lig8cUAqeSbWu87xDMvr1w
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
